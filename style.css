@@ -1,0 +1,100 @@
+/* 1. Global Background and Text Colors */
+.stApp {
+    background-color: #191414; 
+    color: #F5F5DC; 
+}
+
+/* 2. Sidebar Background */
+.stSidebar {
+    background-color: #282828 !important; 
+}
+
+/* 3. Streamlit Root Variables */
+:root {
+    --primary-color: #1DB954; 
+    --secondary-background-color: #282828;
+    --background-color: #191414;
+    --text-color: #F5F5DC; 
+}
+
+/* 4. Explicit Text Color Overrides */
+h1, h2, h3, h4, h5, h6, p, div[data-testid="stText"], div[data-testid="stMetricValue"] {
+    color: #F5F5DC !important;
+}
+
+/* 5. Widget Labels Fix */
+.stRadio > label, 
+.stTextInput label, 
+.stNumberInput label {
+    color: #F5F5DC !important; 
+    font-weight: 500;
+}
+
+
+/* 6. Universal Button */
+div.stButton > button {
+    border-radius: 500px !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    border: none;
+    box-shadow: none !important;
+}
+
+div.stButton > button.primary { 
+    background-color: #1DB954 !important;
+    color: #191414 !important;
+}
+div.stButton > button.primary:hover {
+    background-color: #1ED760 !important;
+}
+
+button:not(.primary) { 
+    background-color: #282828 !important;
+    color: #F5F5DC !important;
+    border: 1px solid #1DB954 !important;
+    border-radius: 500px !important;
+}
+
+button:not(.primary):hover { 
+    background-color: #383838 !important;
+    color: #F5F5DC !important;
+    border: 1px solid #1ED760 !important;
+}
+
+button:not(.primary):active,
+button:not(.primary):focus {
+    background-color: #282828 !important;
+    border: 1px solid #1DB954 !important;
+}
+
+/* 7. Tooltip */
+div[data-testid="stTooltipContent"] {
+    background-color: #F5F5DC !important;
+    border: 1px solid #191414;
+}
+
+div[data-testid="stTooltipContent"] * { 
+    color: #191414 !important;
+}
+
+/* 8. Other Elements */
+.stDataFrame {
+    color: #F5F5DC; 
+}
+.stAlert div[data-testid="stText"] {
+    color: #1DB954 !important; 
+}
+
+div.stButton > button.primary[disabled] {
+    opacity: 0.6;
+    background-color: #1DB954 !important;
+    border-radius: 500px !important;
+    cursor: not-allowed;
+}
+
+button:not(.primary)[disabled] {
+    opacity: 0.6;
+    background-color: #282828 !important;
+    border-radius: 500px !important;
+    cursor: not-allowed;
+}
